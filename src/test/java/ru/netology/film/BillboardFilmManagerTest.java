@@ -120,7 +120,7 @@ class BillboardFilmManagerTest {
         BillboardFilm[] expected = {film12, film11, film10, film9, film8, film7, film6, film5, film4, film3};
 
 
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -156,7 +156,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {film12, film11, film10, film9, film8, film7, film6, film5, film4, film3, film2};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -192,7 +192,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {film12, film11, film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -228,7 +228,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {film12, film11, film10, film9, film8, film7, film6, film5, film4, film3, film2, film1};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -264,7 +264,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {film12};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -300,7 +300,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {film12, film11};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 
@@ -336,7 +336,7 @@ class BillboardFilmManagerTest {
         manager.addSave(film12);
 
         BillboardFilm[] expected = {};
-        BillboardFilm[] actual = manager.getAll();
+        BillboardFilm[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
 

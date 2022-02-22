@@ -32,7 +32,7 @@ public class BillboardFilmManager {
         return films;
     }
 
-    public BillboardFilm[] getAll() {
+    public BillboardFilm[] findLast() {
         int resultLength = films.length;
         if (resultLength > limit) {
             resultLength = limit;
